@@ -7,7 +7,7 @@ class AppBarWidget extends StatelessWidget {
   final String appBarTitle;
   AppBarWidget({this.appBarTitle = "Sasta whatsapp"});
 
-  //const AppBarWidget({super.key});
+  //const AppBarWidget({super.key});  
 
   @override
   PreferredSizeWidget build(BuildContext context) {
@@ -94,6 +94,14 @@ class _DrawerWidgetState extends State<DrawerWidget> {
           ListTile(
             leading: Icon(Icons.message, color: Colors.black),
             title: Text("Send message", style: TextStyle(color: Colors.black), textScaleFactor: 1.1),
+            onTap: () {
+              Navigator.pushNamedAndRemoveUntil(context, sendMessageRoute, (route) => false);
+            }
+          ),
+
+          ListTile(
+            leading: Icon(Icons.message, color: Colors.black),
+            title: Text("Hold Up", style: TextStyle(color: Colors.black), textScaleFactor: 1.1),
             onTap: () {
               Navigator.pushNamedAndRemoveUntil(context, sendMessageRoute, (route) => false);
             }

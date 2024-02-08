@@ -40,12 +40,12 @@ class _MyAppState extends State<MyApp> {
       initialRoute: "/",
 
       routes: {
-        homeRoute:(context) => HomePage(),
-        loginRoute:(context) => LoginPage(),
-        registerRoute:(context) => RegisterPage(),
-        editProfileRoute:(context) => EditProfilePage(),
+        homeRoute:(context) => const HomePage(),
+        loginRoute:(context) => const LoginPage(),
+        registerRoute:(context) => const RegisterPage(),
+        editProfileRoute:(context) => const EditProfilePage(),
         //chatWindowForUserRoute:(context) => ChatWindow("", "", "", ""),
-        sendMessageRoute:(context) => SendMessage(),
+        sendMessageRoute:(context) => const SendMessage(),
       }
     );
   }
